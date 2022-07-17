@@ -1,0 +1,239 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".dueDateActivity">
+    <include
+        android:id="@+id/dueDate_activity_toolbar"
+        layout="@layout/toolbar_layout">
+    </include>
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:id="@+id/dueCalculatorLayout"
+        android:visibility="invisible"
+        android:orientation="vertical"
+        android:layout_below="@+id/dueDate_activity_toolbar">
+
+    <ImageView
+        style="@style/BackGroundImageView"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true"
+        tools:ignore="ContentDescription" />
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:layout_marginTop="60dp"
+            android:layout_marginRight="20dp"
+            android:layout_marginLeft="20dp"
+            >
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Select the first day of your last menstrual period: "
+                android:gravity="center_horizontal"
+                android:layout_gravity="center_horizontal"
+                android:textAlignment="center"
+                android:padding="10dp"
+                android:textSize="22sp"
+                android:textStyle="bold"
+                android:layout_marginRight="10dp"
+                android:textColor="#000"/>
+
+            <TextView
+                android:id="@+id/tvCalender"
+                android:hint="Tap here to pick date"
+                android:textAlignment="center"
+                android:gravity="center_horizontal"
+                android:layout_width="match_parent"
+                android:layout_height="45dp"
+                android:padding="10dp"
+                android:textSize="18sp"
+                />
+        </LinearLayout>
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:layout_marginTop="20dp"
+            android:layout_marginRight="20dp"
+            android:layout_marginLeft="20dp"
+            >
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Usual number of days in your period: "
+                android:textAlignment="center"
+                android:padding="10dp"
+                android:textSize="20sp"
+                android:textStyle="bold"
+                android:layout_marginRight="10dp"
+                android:textColor="#000"/>
+
+            <Spinner
+                android:id="@+id/spDays"
+                android:textAlignment="center"
+                android:gravity="center_horizontal"
+                android:layout_width="match_parent"
+                android:layout_height="45dp"
+                android:padding="10dp"
+                android:textSize="18sp"
+                />
+        </LinearLayout>
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_marginTop="30dp"
+            android:layout_marginRight="20dp"
+            android:layout_marginLeft="20dp">
+            <Button
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:text="Calculate"
+                android:id="@+id/btnCalDueDate"
+                android:layout_gravity="center"
+                android:layout_marginLeft="125dp"
+                android:textStyle="bold"
+                android:textColor="@color/white"
+                android:background="@drawable/button"/>
+        </LinearLayout>
+    </LinearLayout>
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:id="@+id/dueResultLayout"
+        android:orientation="vertical"
+        android:layout_below="@+id/dueDate_activity_toolbar">
+
+        <ImageView
+            style="@style/BackGroundImageViewResult"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_alignParentTop="true"
+            android:layout_centerHorizontal="true"
+            tools:ignore="ContentDescription" />
+        <ScrollView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:layout_marginTop="60dp"
+                android:layout_marginRight="20dp"
+                android:layout_marginLeft="20dp"
+                >
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Here are the results based on the information you provided :"
+                    android:gravity="center_horizontal"
+                    android:layout_gravity="center_horizontal"
+                    android:textAlignment="center"
+                    android:padding="10dp"
+                    android:textSize="22sp"
+                    android:textStyle="bold"
+                    android:layout_marginRight="10dp"
+                    android:textColor="#000"/>
+
+                <TextView
+                    android:id="@+id/tvShowResult"
+                    android:text="Tap here to pick date"
+                    android:textColor="@color/black"
+                    android:textAlignment="center"
+                    android:gravity="center_horizontal"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:padding="10dp"
+                    android:textSize="18sp"
+                    />
+            </LinearLayout>
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:layout_marginTop="60dp"
+                android:layout_marginRight="20dp"
+                android:layout_marginLeft="20dp"
+                >
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Recommended Schedule of prenatal visits for a Healthy Pregnancy :"
+                    android:gravity="center_horizontal"
+                    android:layout_gravity="center_horizontal"
+                    android:textAlignment="center"
+                    android:padding="10dp"
+                    android:textSize="22sp"
+                    android:textStyle="bold"
+                    android:layout_marginRight="10dp"
+                    android:textColor="#000"/>
+
+                <TextView
+                    android:id="@+id/tvShowVisitDate"
+                    android:text="Tap here to pick date"
+                    android:textColor="@color/black"
+                    android:textAlignment="center"
+                    android:gravity="center_horizontal"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:padding="10dp"
+                    android:textSize="18sp"
+                    />
+            </LinearLayout>
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:layout_marginTop="20dp"
+                android:layout_marginRight="20dp"
+                android:layout_marginLeft="20dp"
+                >
+                <Button
+                    android:layout_width="180dp"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/btnCalAgain"
+                    android:text="Calculate Again"
+                    android:textStyle="bold"
+                    android:layout_marginRight="10dp"
+                    />
+
+                <Button
+                    android:layout_width="180dp"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/btnDueUpload"
+                    android:text="Set alarm"
+                    android:textStyle="bold"
+                    android:layout_marginRight="10dp"
+                    />
+            </LinearLayout>
+
+        </LinearLayout>
+        </ScrollView>
+
+    </RelativeLayout>
+
+</RelativeLayout>

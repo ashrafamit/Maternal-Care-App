@@ -1,0 +1,11 @@
+<resources>
+    <string name="app_name">Maternal Care</string>
+    <string name="drawerOpen">drawerOpen</string>
+    <string name="drawerClose">drawerClose</string>
+
+    <string-array name="days">
+        <item>User Status</item>
+        <item>Student</item>
+        <item>Admin</item>
+    </string-array>
+</resources>
