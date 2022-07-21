@@ -77,7 +77,7 @@ public class AlarmReceiver extends BroadcastReceiver {
                 String c=snapshot.child(s).getValue().toString();
                 cnt=Integer.parseInt(c);
                 if ((cnt > 0) && (cnt < 5)){
-                    System.out.println("success songram");
+                    System.out.println("success 123");
 
                     Intent i = new Intent(context,ShowReminderMsg.class);
                     i.putExtra("msg",s);
